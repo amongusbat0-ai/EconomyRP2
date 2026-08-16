@@ -1,0 +1,51 @@
+name: EconomyRP
+version: '1.1.0'
+main: fr.rp.economy.EconomyRP
+api-version: '1.21'
+author: Baptiste
+description: Systeme d'economie RP - argent virtuel, trade, villageois, quetes, quete globale 12h
+
+commands:
+  balance:
+    description: Voir son solde ou celui d'un joueur
+    usage: /balance [joueur]
+    aliases: [bal, argent, money]
+  pay:
+    description: Payer un autre joueur
+    usage: /pay <joueur> <montant>
+  baltop:
+    description: Classement des joueurs les plus riches
+    usage: /baltop
+  eco:
+    description: Commandes admin de l'economie
+    usage: /eco <give|take|set> <joueur> <montant>
+  wallet:
+    description: Ouvrir le porte-monnaie visuel
+    usage: /wallet
+  trade:
+    description: Proposer un echange a un joueur
+    usage: /trade <joueur>
+  quests:
+    description: Ouvrir le tableau des quetes
+    usage: /quests
+  questcreate:
+    description: Proposer une quete a un joueur
+    usage: /questcreate <joueur> <recompense> <description>
+  questaccept:
+    description: Accepter une quete proposee
+    usage: /questaccept <joueur>
+  questrefuse:
+    description: Refuser une quete proposee
+    usage: /questrefuse <joueur>
+  questvalider:
+    description: Valider la quete terminee par un joueur et lui verser la recompense
+    usage: /questvalider <joueur>
+  questadmin:
+    description: Commandes admin des quetes (creer, supprimer, globale)
+    usage: /questadmin <create|delete|list|reload|global>
+    permission: economyrp.admin
+
+permissions:
+  economyrp.admin:
+    description: Acces aux commandes admin de l'economie et des quetes
+    default: op

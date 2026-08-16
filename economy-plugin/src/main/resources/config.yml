@@ -1,0 +1,1533 @@
+# ============================================
+#   Configuration EconomyRP
+# ============================================
+
+# Argent de depart pour les nouveaux joueurs
+solde-depart: 100.0
+
+# Symbole affiche apres les montants
+symbole-monnaie: " pieces"
+
+# Multiplicateur des prix de vente des marchands ambulants / villageois
+# 1.0 = prix normal, 1.5 = 50% plus attractif pour le joueur
+multiplicateur-attractivite: 1.4
+
+# Valeur en argent du plugin d'une emeraude vanilla dans les echanges villageois
+# Les villageois n'utilisent plus d'emeraudes physiques : tout passe par le solde du joueur
+prix-par-emeraude: 10.0
+
+# Quetes fixes proposees dans /quests
+# Le joueur doit avoir les objets requis dans son inventaire pour valider
+quetes:
+
+  # ========== BÛCHERON / BOIS ==========
+  bucheron_chene:
+    nom: "Bucheron du chene"
+    description: "Rendez 32 buches de chene"
+    difficulte: facile
+    recompense: 45.0
+    materiau: OAK_LOG
+    quantite: 32
+    dimension: any
+  bucheron_sapin:
+    nom: "Bucheron des sapins"
+    description: "Rendez 32 buches de sapin"
+    difficulte: facile
+    recompense: 45.0
+    materiau: SPRUCE_LOG
+    quantite: 32
+    dimension: any
+  bucheron_bouleau:
+    nom: "Bucheron des bouleaux"
+    description: "Rendez 32 buches de bouleau"
+    difficulte: facile
+    recompense: 45.0
+    materiau: BIRCH_LOG
+    quantite: 32
+    dimension: any
+  bucheron_jungle:
+    nom: "Bucheron de la jungle"
+    description: "Rendez 24 buches de jungle"
+    difficulte: moyen
+    recompense: 70.0
+    materiau: JUNGLE_LOG
+    quantite: 24
+    dimension: any
+  bucheron_acacia:
+    nom: "Bucheron des savanes"
+    description: "Rendez 24 buches d'acacia"
+    difficulte: moyen
+    recompense: 70.0
+    materiau: ACACIA_LOG
+    quantite: 24
+    dimension: any
+  bucheron_chene_noir:
+    nom: "Bucheron des chenes noirs"
+    description: "Rendez 24 buches de chene noir"
+    difficulte: moyen
+    recompense: 75.0
+    materiau: DARK_OAK_LOG
+    quantite: 24
+    dimension: any
+  bucheron_mangrove:
+    nom: "Bucheron des mangroves"
+    description: "Rendez 20 buches de mangrove"
+    difficulte: moyen
+    recompense: 80.0
+    materiau: MANGROVE_LOG
+    quantite: 20
+    dimension: any
+  bucheron_cerisier:
+    nom: "Bucheron des cerisiers"
+    description: "Rendez 16 buches de cerisier"
+    difficulte: moyen
+    recompense: 90.0
+    materiau: CHERRY_LOG
+    quantite: 16
+    dimension: any
+  bucheron_massif:
+    nom: "Grande coupe"
+    description: "Rendez 64 buches de chene"
+    difficulte: moyen
+    recompense: 110.0
+    materiau: OAK_LOG
+    quantite: 64
+    dimension: any
+  charbon_bois:
+    nom: "Charbon de bois"
+    description: "Rendez 32 charbons de bois"
+    difficulte: facile
+    recompense: 55.0
+    materiau: CHARCOAL
+    quantite: 32
+    dimension: any
+
+  # ========== MINEUR / MINERAIS ==========
+  mineur_charbon:
+    nom: "Mineur de charbon"
+    description: "Rendez 32 charbons"
+    difficulte: facile
+    recompense: 40.0
+    materiau: COAL
+    quantite: 32
+    dimension: any
+  mineur_fer:
+    nom: "Mineur de fer"
+    description: "Rendez 16 lingots de fer"
+    difficulte: facile
+    recompense: 80.0
+    materiau: IRON_INGOT
+    quantite: 16
+    dimension: any
+  mineur_cuivre:
+    nom: "Mineur de cuivre"
+    description: "Rendez 24 lingots de cuivre"
+    difficulte: facile
+    recompense: 70.0
+    materiau: COPPER_INGOT
+    quantite: 24
+    dimension: any
+  mineur_or:
+    nom: "Mineur d'or"
+    description: "Rendez 12 lingots d'or"
+    difficulte: moyen
+    recompense: 180.0
+    materiau: GOLD_INGOT
+    quantite: 12
+    dimension: any
+  mineur_redstone:
+    nom: "Mineur de redstone"
+    description: "Rendez 48 redstones"
+    difficulte: moyen
+    recompense: 90.0
+    materiau: REDSTONE
+    quantite: 48
+    dimension: any
+  mineur_lapis:
+    nom: "Mineur de lapis"
+    description: "Rendez 24 lapis-lazuli"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: LAPIS_LAZULI
+    quantite: 24
+    dimension: any
+  mineur_emeraude:
+    nom: "Mineur d'emeraudes"
+    description: "Rendez 8 emeraudes"
+    difficulte: difficile
+    recompense: 250.0
+    materiau: EMERALD
+    quantite: 8
+    dimension: any
+  mineur_diamant:
+    nom: "Mineur de diamants"
+    description: "Rendez 5 diamants"
+    difficulte: difficile
+    recompense: 350.0
+    materiau: DIAMOND
+    quantite: 5
+    dimension: any
+  mineur_netherite:
+    nom: "Chasseur de netherite"
+    description: "Rendez 2 lingots de netherite"
+    difficulte: tres_difficile
+    recompense: 800.0
+    materiau: NETHERITE_INGOT
+    quantite: 2
+    dimension: any
+  mineur_quartz:
+    nom: "Mineur de quartz"
+    description: "Rendez 32 quartz du Nether"
+    difficulte: moyen
+    recompense: 120.0
+    materiau: QUARTZ
+    quantite: 32
+    dimension: any
+  mineur_amethyste:
+    nom: "Mineur d'amethyste"
+    description: "Rendez 16 eclats d'amethyste"
+    difficulte: moyen
+    recompense: 110.0
+    materiau: AMETHYST_SHARD
+    quantite: 16
+    dimension: any
+  mineur_debris:
+    nom: "Chasseur de debris"
+    description: "Rendez 4 debris antiques"
+    difficulte: tres_difficile
+    recompense: 600.0
+    materiau: ANCIENT_DEBRIS
+    quantite: 4
+    dimension: any
+
+  # ========== FORGERON ==========
+  forgeron_fer:
+    nom: "Forgeron ferreux"
+    description: "Rendez 24 lingots de fer"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: IRON_INGOT
+    quantite: 24
+    dimension: any
+  forgeron_or:
+    nom: "Forgeron dore"
+    description: "Rendez 16 lingots d'or"
+    difficulte: moyen
+    recompense: 220.0
+    materiau: GOLD_INGOT
+    quantite: 16
+    dimension: any
+  forgeron_cuivre:
+    nom: "Forgeron de cuivre"
+    description: "Rendez 32 lingots de cuivre"
+    difficulte: facile
+    recompense: 95.0
+    materiau: COPPER_INGOT
+    quantite: 32
+    dimension: any
+  forgeron_netherite:
+    nom: "Maitre forgeron"
+    description: "Rendez 1 lingot de netherite"
+    difficulte: tres_difficile
+    recompense: 500.0
+    materiau: NETHERITE_INGOT
+    quantite: 1
+    dimension: any
+  forgeron_chainmail:
+    nom: "Armurier de chaines"
+    description: "Rendez 16 chaines"
+    difficulte: moyen
+    recompense: 130.0
+    materiau: CHAIN
+    quantite: 16
+    dimension: any
+
+  # ========== FERMIER / AGRICULTURE ==========
+  fermier_ble:
+    nom: "Fermier de ble"
+    description: "Rendez 64 bles"
+    difficulte: facile
+    recompense: 70.0
+    materiau: WHEAT
+    quantite: 64
+    dimension: any
+  fermier_carotte:
+    nom: "Fermier de carottes"
+    description: "Rendez 48 carottes"
+    difficulte: facile
+    recompense: 65.0
+    materiau: CARROT
+    quantite: 48
+    dimension: any
+  fermier_pomme_de_terre:
+    nom: "Fermier de pommes de terre"
+    description: "Rendez 48 pommes de terre"
+    difficulte: facile
+    recompense: 60.0
+    materiau: POTATO
+    quantite: 48
+    dimension: any
+  fermier_betterave:
+    nom: "Fermier de betteraves"
+    description: "Rendez 32 betteraves"
+    difficulte: facile
+    recompense: 55.0
+    materiau: BEETROOT
+    quantite: 32
+    dimension: any
+  fermier_melon:
+    nom: "Fermier de melons"
+    description: "Rendez 16 tranches de melon"
+    difficulte: facile
+    recompense: 50.0
+    materiau: MELON_SLICE
+    quantite: 16
+    dimension: any
+  fermier_citrouille:
+    nom: "Fermier de citrouilles"
+    description: "Rendez 12 citrouilles"
+    difficulte: moyen
+    recompense: 90.0
+    materiau: PUMPKIN
+    quantite: 12
+    dimension: any
+  fermier_canne:
+    nom: "Planteur de canne a sucre"
+    description: "Rendez 64 cannes a sucre"
+    difficulte: facile
+    recompense: 75.0
+    materiau: SUGAR_CANE
+    quantite: 64
+    dimension: any
+  fermier_cactus:
+    nom: "Cultivateur de cactus"
+    description: "Rendez 32 cactus"
+    difficulte: moyen
+    recompense: 85.0
+    materiau: CACTUS
+    quantite: 32
+    dimension: any
+  fermier_bambou:
+    nom: "Fermier de bambou"
+    description: "Rendez 64 bambous"
+    difficulte: facile
+    recompense: 70.0
+    materiau: BAMBOO
+    quantite: 64
+    dimension: any
+  fermier_cacao:
+    nom: "Cultivateur de cacao"
+    description: "Rendez 24 feves de cacao"
+    difficulte: moyen
+    recompense: 95.0
+    materiau: COCOA_BEANS
+    quantite: 24
+    dimension: any
+  fermier_nether_wart:
+    nom: "Cultivateur de verrues du Nether"
+    description: "Rendez 32 verrues du Nether"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: NETHER_WART
+    quantite: 32
+    dimension: any
+  fermier_champignon:
+    nom: "Cueilleur de champignons"
+    description: "Rendez 16 champignons bruns"
+    difficulte: facile
+    recompense: 50.0
+    materiau: BROWN_MUSHROOM
+    quantite: 16
+    dimension: any
+  fermier_champignon_rouge:
+    nom: "Cueilleur de champignons rouges"
+    description: "Rendez 16 champignons rouges"
+    difficulte: facile
+    recompense: 50.0
+    materiau: RED_MUSHROOM
+    quantite: 16
+    dimension: any
+  fermier_baies:
+    nom: "Cueilleur de baies"
+    description: "Rendez 32 baies sucrees"
+    difficulte: facile
+    recompense: 45.0
+    materiau: SWEET_BERRIES
+    quantite: 32
+    dimension: any
+  fermier_glow_baies:
+    nom: "Cueilleur de baies lumineuses"
+    description: "Rendez 24 baies lumineuses"
+    difficulte: moyen
+    recompense: 80.0
+    materiau: GLOW_BERRIES
+    quantite: 24
+    dimension: any
+
+  # ========== PÊCHEUR ==========
+  pecheur_morue:
+    nom: "Pecheur de morues"
+    description: "Rendez 20 morues crues"
+    difficulte: facile
+    recompense: 70.0
+    materiau: COD
+    quantite: 20
+    dimension: any
+  pecheur_saumon:
+    nom: "Pecheur de saumons"
+    description: "Rendez 16 saumons crus"
+    difficulte: facile
+    recompense: 80.0
+    materiau: SALMON
+    quantite: 16
+    dimension: any
+  pecheur_poisson_tropical:
+    nom: "Pecheur tropical"
+    description: "Rendez 8 poissons tropicaux"
+    difficulte: moyen
+    recompense: 120.0
+    materiau: TROPICAL_FISH
+    quantite: 8
+    dimension: any
+  pecheur_poisson_globe:
+    nom: "Pecheur de poissons-globes"
+    description: "Rendez 6 poissons-globes"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: PUFFERFISH
+    quantite: 6
+    dimension: any
+  pecheur_algues:
+    nom: "Recolteur d'algues"
+    description: "Rendez 32 algues"
+    difficulte: facile
+    recompense: 55.0
+    materiau: KELP
+    quantite: 32
+    dimension: any
+  pecheur_prismarine:
+    nom: "Chasseur de prismarine"
+    description: "Rendez 16 eclats de prismarine"
+    difficulte: difficile
+    recompense: 200.0
+    materiau: PRISMARINE_SHARD
+    quantite: 16
+    dimension: any
+  pecheur_cristaux:
+    nom: "Chasseur de cristaux de prismarine"
+    description: "Rendez 8 cristaux de prismarine"
+    difficulte: difficile
+    recompense: 220.0
+    materiau: PRISMARINE_CRYSTALS
+    quantite: 8
+    dimension: any
+
+  # ========== CHASSEUR / MOBS ==========
+  chasseur_os:
+    nom: "Chasseur d'os"
+    description: "Rendez 24 os"
+    difficulte: facile
+    recompense: 60.0
+    materiau: BONE
+    quantite: 24
+    dimension: any
+  chasseur_chair:
+    nom: "Chasseur de chair putride"
+    description: "Rendez 32 chairs putrides"
+    difficulte: facile
+    recompense: 50.0
+    materiau: ROTTEN_FLESH
+    quantite: 32
+    dimension: any
+  chasseur_ficelle:
+    nom: "Chasseur de ficelle"
+    description: "Rendez 24 ficelles"
+    difficulte: facile
+    recompense: 55.0
+    materiau: STRING
+    quantite: 24
+    dimension: any
+  chasseur_poudre:
+    nom: "Chasseur de poudre a canon"
+    description: "Rendez 16 poudres a canon"
+    difficulte: moyen
+    recompense: 110.0
+    materiau: GUNPOWDER
+    quantite: 16
+    dimension: any
+  chasseur_perle:
+    nom: "Chasseur de perles de l'End"
+    description: "Rendez 8 perles de l'End"
+    difficulte: moyen
+    recompense: 160.0
+    materiau: ENDER_PEARL
+    quantite: 8
+    dimension: any
+  chasseur_blaze:
+    nom: "Chasseur de poudres de Blaze"
+    description: "Rendez 12 poudres de Blaze"
+    difficulte: difficile
+    recompense: 220.0
+    materiau: BLAZE_POWDER
+    quantite: 12
+    dimension: any
+  chasseur_baton_blaze:
+    nom: "Chasseur de batons de Blaze"
+    description: "Rendez 8 batons de Blaze"
+    difficulte: difficile
+    recompense: 250.0
+    materiau: BLAZE_ROD
+    quantite: 8
+    dimension: any
+  chasseur_larme:
+    nom: "Chasseur de larmes de Ghast"
+    description: "Rendez 6 larmes de Ghast"
+    difficulte: difficile
+    recompense: 280.0
+    materiau: GHAST_TEAR
+    quantite: 6
+    dimension: any
+  chasseur_membrane:
+    nom: "Chasseur de membranes de Phantom"
+    description: "Rendez 8 membranes de Phantom"
+    difficulte: difficile
+    recompense: 200.0
+    materiau: PHANTOM_MEMBRANE
+    quantite: 8
+    dimension: any
+  chasseur_cuir:
+    nom: "Chasseur de cuir"
+    description: "Rendez 20 cuirs"
+    difficulte: facile
+    recompense: 70.0
+    materiau: LEATHER
+    quantite: 20
+    dimension: any
+  chasseur_plume:
+    nom: "Chasseur de plumes"
+    description: "Rendez 24 plumes"
+    difficulte: facile
+    recompense: 50.0
+    materiau: FEATHER
+    quantite: 24
+    dimension: any
+  chasseur_oeuf:
+    nom: "Collecteur d'oeufs"
+    description: "Rendez 16 oeufs"
+    difficulte: facile
+    recompense: 40.0
+    materiau: EGG
+    quantite: 16
+    dimension: any
+  chasseur_slime:
+    nom: "Chasseur de boules de slime"
+    description: "Rendez 12 boules de slime"
+    difficulte: moyen
+    recompense: 130.0
+    materiau: SLIME_BALL
+    quantite: 12
+    dimension: any
+  chasseur_magma:
+    nom: "Chasseur de cremes de magma"
+    description: "Rendez 12 cremes de magma"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: MAGMA_CREAM
+    quantite: 12
+    dimension: any
+  chasseur_shulker:
+    nom: "Chasseur de carapaces de Shulker"
+    description: "Rendez 4 carapaces de Shulker"
+    difficulte: tres_difficile
+    recompense: 450.0
+    materiau: SHULKER_SHELL
+    quantite: 4
+    dimension: any
+  chasseur_wither:
+    nom: "Chasseur de tetes de Wither squelette"
+    description: "Rendez 1 tete de Wither squelette"
+    difficulte: tres_difficile
+    recompense: 700.0
+    materiau: WITHER_SKELETON_SKULL
+    quantite: 1
+    dimension: any
+
+  # ========== ALCHIMISTE / POTIONS ==========
+  alchimiste_nether_wart:
+    nom: "Alchimiste debutant"
+    description: "Rendez 16 verrues du Nether"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: NETHER_WART
+    quantite: 16
+    dimension: any
+  alchimiste_glowstone:
+    nom: "Alchimiste de glowstone"
+    description: "Rendez 16 poussieres de glowstone"
+    difficulte: moyen
+    recompense: 120.0
+    materiau: GLOWSTONE_DUST
+    quantite: 16
+    dimension: any
+  alchimiste_fer_mente:
+    nom: "Alchimiste de fermente"
+    description: "Rendez 8 ferments d'araignee"
+    difficulte: moyen
+    recompense: 110.0
+    materiau: FERMENTED_SPIDER_EYE
+    quantite: 8
+    dimension: any
+  alchimiste_oeil:
+    nom: "Alchimiste d'yeux d'araignee"
+    description: "Rendez 16 yeux d'araignee"
+    difficulte: facile
+    recompense: 70.0
+    materiau: SPIDER_EYE
+    quantite: 16
+    dimension: any
+  alchimiste_sucre:
+    nom: "Alchimiste de sucre"
+    description: "Rendez 32 sucres"
+    difficulte: facile
+    recompense: 45.0
+    materiau: SUGAR
+    quantite: 32
+    dimension: any
+  alchimiste_magma:
+    nom: "Alchimiste de creme de magma"
+    description: "Rendez 8 cremes de magma"
+    difficulte: moyen
+    recompense: 130.0
+    materiau: MAGMA_CREAM
+    quantite: 8
+    dimension: any
+
+  # ========== CONSTRUCTEUR / BLOCS ==========
+  constructeur_pierre:
+    nom: "Tailleur de pierre"
+    description: "Rendez 64 pierres"
+    difficulte: facile
+    recompense: 50.0
+    materiau: STONE
+    quantite: 64
+    dimension: any
+  constructeur_cobble:
+    nom: "Collecteur de cobblestone"
+    description: "Rendez 128 cobblestones"
+    difficulte: facile
+    recompense: 60.0
+    materiau: COBBLESTONE
+    quantite: 128
+    dimension: any
+  constructeur_brique:
+    nom: "Briquetier"
+    description: "Rendez 48 briques"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: BRICK
+    quantite: 48
+    dimension: any
+  constructeur_verre:
+    nom: "Verrier"
+    description: "Rendez 32 verres"
+    difficulte: moyen
+    recompense: 90.0
+    materiau: GLASS
+    quantite: 32
+    dimension: any
+  constructeur_sable:
+    nom: "Collecteur de sable"
+    description: "Rendez 64 sables"
+    difficulte: facile
+    recompense: 45.0
+    materiau: SAND
+    quantite: 64
+    dimension: any
+  constructeur_argile:
+    nom: "Collecteur d'argile"
+    description: "Rendez 32 boules d'argile"
+    difficulte: moyen
+    recompense: 85.0
+    materiau: CLAY_BALL
+    quantite: 32
+    dimension: any
+  constructeur_obsidienne:
+    nom: "Mineur d'obsidienne"
+    description: "Rendez 16 obsidiennes"
+    difficulte: difficile
+    recompense: 280.0
+    materiau: OBSIDIAN
+    quantite: 16
+    dimension: any
+  constructeur_end_stone:
+    nom: "Collecteur de pierre de l'End"
+    description: "Rendez 32 pierres de l'End"
+    difficulte: difficile
+    recompense: 200.0
+    materiau: END_STONE
+    quantite: 32
+    dimension: any
+  constructeur_netherrack:
+    nom: "Collecteur de netherrack"
+    description: "Rendez 64 netherracks"
+    difficulte: facile
+    recompense: 55.0
+    materiau: NETHERRACK
+    quantite: 64
+    dimension: any
+  constructeur_blackstone:
+    nom: "Collecteur de blackstone"
+    description: "Rendez 48 blackstones"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: BLACKSTONE
+    quantite: 48
+    dimension: any
+  constructeur_deepslate:
+    nom: "Mineur de deepslate"
+    description: "Rendez 48 deepslates"
+    difficulte: moyen
+    recompense: 95.0
+    materiau: DEEPSLATE
+    quantite: 48
+    dimension: any
+  constructeur_tuff:
+    nom: "Collecteur de tuff"
+    description: "Rendez 32 tuffs"
+    difficulte: moyen
+    recompense: 80.0
+    materiau: TUFF
+    quantite: 32
+    dimension: any
+  constructeur_calcite:
+    nom: "Collecteur de calcite"
+    description: "Rendez 24 calcites"
+    difficulte: moyen
+    recompense: 90.0
+    materiau: CALCITE
+    quantite: 24
+    dimension: any
+  constructeur_dripstone:
+    nom: "Collecteur de dripstone"
+    description: "Rendez 24 pointes de dripstone"
+    difficulte: moyen
+    recompense: 85.0
+    materiau: POINTED_DRIPSTONE
+    quantite: 24
+    dimension: any
+
+  # ========== ENCHANTEUR / XP ==========
+  enchanteur_livre:
+    nom: "Enchanteur de livres"
+    description: "Rendez 8 livres"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: BOOK
+    quantite: 8
+    dimension: any
+  enchanteur_papier:
+    nom: "Fabricant de papier"
+    description: "Rendez 32 papiers"
+    difficulte: facile
+    recompense: 50.0
+    materiau: PAPER
+    quantite: 32
+    dimension: any
+  enchanteur_lapis:
+    nom: "Fournisseur de lapis"
+    description: "Rendez 32 lapis-lazuli"
+    difficulte: moyen
+    recompense: 120.0
+    materiau: LAPIS_LAZULI
+    quantite: 32
+    dimension: any
+  enchanteur_experience:
+    nom: "Collecteur de bouteilles d'XP"
+    description: "Rendez 16 bouteilles d'experience"
+    difficulte: difficile
+    recompense: 250.0
+    materiau: EXPERIENCE_BOTTLE
+    quantite: 16
+    dimension: any
+
+  # ========== DIVERS / SPÉCIAL ==========
+  divers_miel:
+    nom: "Apiculteur"
+    description: "Rendez 8 pots de miel"
+    difficulte: moyen
+    recompense: 130.0
+    materiau: HONEY_BOTTLE
+    quantite: 8
+    dimension: any
+  divers_rayon:
+    nom: "Recolteur de rayons de miel"
+    description: "Rendez 6 rayons de miel"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: HONEYCOMB
+    quantite: 6
+    dimension: any
+  divers_scute:
+    nom: "Chasseur de carapaces de tortue"
+    description: "Rendez 4 carapaces de tortue"
+    difficulte: difficile
+    recompense: 300.0
+    materiau: TURTLE_SCUTE
+    quantite: 4
+    dimension: any
+  divers_nautilus:
+    nom: "Chasseur de coquilles de Nautile"
+    description: "Rendez 4 coquilles de Nautile"
+    difficulte: difficile
+    recompense: 280.0
+    materiau: NAUTILUS_SHELL
+    quantite: 4
+    dimension: any
+  divers_coeur:
+    nom: "Chasseur de coeurs de la mer"
+    description: "Rendez 1 coeur de la mer"
+    difficulte: tres_difficile
+    recompense: 600.0
+    materiau: HEART_OF_THE_SEA
+    quantite: 1
+    dimension: any
+  divers_totem:
+    nom: "Chasseur de totems d'immortalite"
+    description: "Rendez 1 totem d'immortalite"
+    difficulte: tres_difficile
+    recompense: 750.0
+    materiau: TOTEM_OF_UNDYING
+    quantite: 1
+    dimension: any
+  divers_elytra:
+    nom: "Chasseur d'elytres"
+    description: "Rendez 1 elytre"
+    difficulte: tres_difficile
+    recompense: 1000.0
+    materiau: ELYTRA
+    quantite: 1
+    dimension: any
+  divers_dragon_egg:
+    nom: "Chasseur d'oeuf de dragon"
+    description: "Rendez 1 oeuf de dragon"
+    difficulte: legendaire
+    recompense: 2500.0
+    materiau: DRAGON_EGG
+    quantite: 1
+    dimension: any
+  divers_nether_star:
+    nom: "Chasseur d'etoile du Nether"
+    description: "Rendez 1 etoile du Nether"
+    difficulte: legendaire
+    recompense: 2000.0
+    materiau: NETHER_STAR
+    quantite: 1
+    dimension: any
+  divers_beacon:
+    nom: "Constructeur de balise"
+    description: "Rendez 1 balise"
+    difficulte: tres_difficile
+    recompense: 1200.0
+    materiau: BEACON
+    quantite: 1
+    dimension: any
+  divers_conduit:
+    nom: "Constructeur de conduit"
+    description: "Rendez 1 conduit"
+    difficulte: tres_difficile
+    recompense: 900.0
+    materiau: CONDUIT
+    quantite: 1
+    dimension: any
+  divers_trident:
+    nom: "Chasseur de tridents"
+    description: "Rendez 1 trident"
+    difficulte: tres_difficile
+    recompense: 800.0
+    materiau: TRIDENT
+    quantite: 1
+    dimension: any
+  divers_echo:
+    nom: "Chasseur d'eclats d'echo"
+    description: "Rendez 4 eclats d'echo"
+    difficulte: difficile
+    recompense: 350.0
+    materiau: ECHO_SHARD
+    quantite: 4
+    dimension: any
+  divers_recovery:
+    nom: "Chasseur de boussoles de recuperation"
+    description: "Rendez 1 boussole de recuperation"
+    difficulte: difficile
+    recompense: 400.0
+    materiau: RECOVERY_COMPASS
+    quantite: 1
+    dimension: any
+  divers_sniffer:
+    nom: "Chasseur d'oeufs de Sniffer"
+    description: "Rendez 1 oeuf de Sniffer"
+    difficulte: tres_difficile
+    recompense: 550.0
+    materiau: SNIFFER_EGG
+    quantite: 1
+    dimension: any
+  divers_armure_chien:
+    nom: "Fabricant d'armure pour chien"
+    description: "Rendez 1 armure pour chien"
+    difficulte: moyen
+    recompense: 150.0
+    materiau: WOLF_ARMOR
+    quantite: 1
+    dimension: any
+
+  # ========== NOURRITURE ==========
+  cuisine_pain:
+    nom: "Boulanger"
+    description: "Rendez 32 pains"
+    difficulte: facile
+    recompense: 60.0
+    materiau: BREAD
+    quantite: 32
+    dimension: any
+  cuisine_steak:
+    nom: "Boucher"
+    description: "Rendez 16 steaks"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: COOKED_BEEF
+    quantite: 16
+    dimension: any
+  cuisine_poulet:
+    nom: "Rotisseur de poulet"
+    description: "Rendez 16 poulets cuits"
+    difficulte: facile
+    recompense: 80.0
+    materiau: COOKED_CHICKEN
+    quantite: 16
+    dimension: any
+  cuisine_porc:
+    nom: "Rotisseur de porc"
+    description: "Rendez 16 cotes de porc cuites"
+    difficulte: facile
+    recompense: 85.0
+    materiau: COOKED_PORKCHOP
+    quantite: 16
+    dimension: any
+  cuisine_mouton:
+    nom: "Rotisseur de mouton"
+    description: "Rendez 16 gigots de mouton cuits"
+    difficulte: facile
+    recompense: 80.0
+    materiau: COOKED_MUTTON
+    quantite: 16
+    dimension: any
+  cuisine_gateau:
+    nom: "Patissier"
+    description: "Rendez 4 gateaux"
+    difficulte: moyen
+    recompense: 160.0
+    materiau: CAKE
+    quantite: 4
+    dimension: any
+  cuisine_cookie:
+    nom: "Biscuiterie"
+    description: "Rendez 32 cookies"
+    difficulte: facile
+    recompense: 70.0
+    materiau: COOKIE
+    quantite: 32
+    dimension: any
+  cuisine_pomme_doree:
+    nom: "Alchimiste de pommes dorees"
+    description: "Rendez 2 pommes dorees"
+    difficulte: difficile
+    recompense: 400.0
+    materiau: GOLDEN_APPLE
+    quantite: 2
+    dimension: any
+  cuisine_pomme_enchantee:
+    nom: "Alchimiste de pommes enchantees"
+    description: "Rendez 1 pomme doree enchantee"
+    difficulte: tres_difficile
+    recompense: 1200.0
+    materiau: ENCHANTED_GOLDEN_APPLE
+    quantite: 1
+    dimension: any
+
+  # ========== FLEURS / PLANTES ==========
+  fleuriste_rose:
+    nom: "Fleuriste de roses"
+    description: "Rendez 16 roses"
+    difficulte: facile
+    recompense: 40.0
+    materiau: POPPY
+    quantite: 16
+    dimension: any
+  fleuriste_pissenlit:
+    nom: "Fleuriste de pissenlits"
+    description: "Rendez 16 pissenlits"
+    difficulte: facile
+    recompense: 35.0
+    materiau: DANDELION
+    quantite: 16
+    dimension: any
+  fleuriste_tournesol:
+    nom: "Fleuriste de tournesols"
+    description: "Rendez 8 tournesols"
+    difficulte: facile
+    recompense: 50.0
+    materiau: SUNFLOWER
+    quantite: 8
+    dimension: any
+  fleuriste_lilas:
+    nom: "Fleuriste de lilas"
+    description: "Rendez 8 lilas"
+    difficulte: facile
+    recompense: 50.0
+    materiau: LILAC
+    quantite: 8
+    dimension: any
+  fleuriste_peonie:
+    nom: "Fleuriste de peonies"
+    description: "Rendez 8 peonies"
+    difficulte: facile
+    recompense: 50.0
+    materiau: PEONY
+    quantite: 8
+    dimension: any
+  fleuriste_orchidee:
+    nom: "Fleuriste d'orchidees"
+    description: "Rendez 8 orchidees bleues"
+    difficulte: moyen
+    recompense: 70.0
+    materiau: BLUE_ORCHID
+    quantite: 8
+    dimension: any
+  fleuriste_spore:
+    nom: "Collecteur de fleurs de spore"
+    description: "Rendez 8 fleurs de spore"
+    difficulte: moyen
+    recompense: 90.0
+    materiau: SPORE_BLOSSOM
+    quantite: 8
+    dimension: any
+  fleuriste_torchflower:
+    nom: "Cultivateur de torchflower"
+    description: "Rendez 4 torchflowers"
+    difficulte: difficile
+    recompense: 200.0
+    materiau: TORCHFLOWER
+    quantite: 4
+    dimension: any
+  fleuriste_pitcher:
+    nom: "Cultivateur de pitcher plant"
+    description: "Rendez 4 pitcher plants"
+    difficulte: difficile
+    recompense: 200.0
+    materiau: PITCHER_PLANT
+    quantite: 4
+    dimension: any
+
+  # ========== WOOL / TEINTURE ==========
+  berger_laine_blanche:
+    nom: "Berger de laine blanche"
+    description: "Rendez 32 laines blanches"
+    difficulte: facile
+    recompense: 60.0
+    materiau: WHITE_WOOL
+    quantite: 32
+    dimension: any
+  berger_laine_noire:
+    nom: "Berger de laine noire"
+    description: "Rendez 16 laines noires"
+    difficulte: moyen
+    recompense: 80.0
+    materiau: BLACK_WOOL
+    quantite: 16
+    dimension: any
+  berger_laine_rouge:
+    nom: "Berger de laine rouge"
+    description: "Rendez 16 laines rouges"
+    difficulte: moyen
+    recompense: 80.0
+    materiau: RED_WOOL
+    quantite: 16
+    dimension: any
+  teinturier_rouge:
+    nom: "Teinturier rouge"
+    description: "Rendez 16 teintures rouges"
+    difficulte: facile
+    recompense: 55.0
+    materiau: RED_DYE
+    quantite: 16
+    dimension: any
+  teinturier_bleu:
+    nom: "Teinturier bleu"
+    description: "Rendez 16 teintures bleues"
+    difficulte: facile
+    recompense: 55.0
+    materiau: BLUE_DYE
+    quantite: 16
+    dimension: any
+  teinturier_vert:
+    nom: "Teinturier vert"
+    description: "Rendez 16 teintures vertes"
+    difficulte: facile
+    recompense: 55.0
+    materiau: GREEN_DYE
+    quantite: 16
+    dimension: any
+  teinturier_jaune:
+    nom: "Teinturier jaune"
+    description: "Rendez 16 teintures jaunes"
+    difficulte: facile
+    recompense: 50.0
+    materiau: YELLOW_DYE
+    quantite: 16
+    dimension: any
+
+  # ========== NETHER ==========
+  nether_quartz:
+    nom: "Mineur de quartz du Nether"
+    description: "Rendez 48 quartz du Nether"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: QUARTZ
+    quantite: 48
+    dimension: nether
+  nether_glowstone:
+    nom: "Collecteur de glowstone"
+    description: "Rendez 32 poussieres de glowstone"
+    difficulte: moyen
+    recompense: 130.0
+    materiau: GLOWSTONE_DUST
+    quantite: 32
+    dimension: nether
+  nether_blaze_rod:
+    nom: "Chasseur de batons de Blaze"
+    description: "Rendez 10 batons de Blaze"
+    difficulte: difficile
+    recompense: 280.0
+    materiau: BLAZE_ROD
+    quantite: 10
+    dimension: nether
+  nether_ghast_tear:
+    nom: "Chasseur de larmes de Ghast"
+    description: "Rendez 8 larmes de Ghast"
+    difficulte: difficile
+    recompense: 320.0
+    materiau: GHAST_TEAR
+    quantite: 8
+    dimension: nether
+  nether_magma_cream:
+    nom: "Chasseur de cremes de magma"
+    description: "Rendez 16 cremes de magma"
+    difficulte: moyen
+    recompense: 160.0
+    materiau: MAGMA_CREAM
+    quantite: 16
+    dimension: nether
+  nether_wart:
+    nom: "Fermier de verrues du Nether"
+    description: "Rendez 48 verrues du Nether"
+    difficulte: moyen
+    recompense: 150.0
+    materiau: NETHER_WART
+    quantite: 48
+    dimension: nether
+  nether_debris:
+    nom: "Chasseur de debris antiques"
+    description: "Rendez 5 debris antiques"
+    difficulte: tres_difficile
+    recompense: 700.0
+    materiau: ANCIENT_DEBRIS
+    quantite: 5
+    dimension: nether
+  nether_netherite:
+    nom: "Forgeron de netherite"
+    description: "Rendez 2 lingots de netherite"
+    difficulte: tres_difficile
+    recompense: 900.0
+    materiau: NETHERITE_INGOT
+    quantite: 2
+    dimension: nether
+  nether_wither_skull:
+    nom: "Chasseur de tetes de Wither"
+    description: "Rendez 1 tete de Wither squelette"
+    difficulte: tres_difficile
+    recompense: 800.0
+    materiau: WITHER_SKELETON_SKULL
+    quantite: 1
+    dimension: nether
+  nether_soul_sand:
+    nom: "Collecteur de sable des ames"
+    description: "Rendez 32 sables des ames"
+    difficulte: facile
+    recompense: 70.0
+    materiau: SOUL_SAND
+    quantite: 32
+    dimension: nether
+  nether_soul_soil:
+    nom: "Collecteur de terre des ames"
+    description: "Rendez 32 terres des ames"
+    difficulte: facile
+    recompense: 70.0
+    materiau: SOUL_SOIL
+    quantite: 32
+    dimension: nether
+  nether_blackstone:
+    nom: "Mineur de blackstone"
+    description: "Rendez 64 blackstones"
+    difficulte: moyen
+    recompense: 110.0
+    materiau: BLACKSTONE
+    quantite: 64
+    dimension: nether
+  nether_basalt:
+    nom: "Mineur de basalte"
+    description: "Rendez 48 basaltes"
+    difficulte: moyen
+    recompense: 100.0
+    materiau: BASALT
+    quantite: 48
+    dimension: nether
+  nether_crimson:
+    nom: "Bucheron cramoisi"
+    description: "Rendez 24 tiges cramoisies"
+    difficulte: moyen
+    recompense: 95.0
+    materiau: CRIMSON_STEM
+    quantite: 24
+    dimension: nether
+  nether_warped:
+    nom: "Bucheron biscornue"
+    description: "Rendez 24 tiges biscornues"
+    difficulte: moyen
+    recompense: 95.0
+    materiau: WARPED_STEM
+    quantite: 24
+    dimension: nether
+  nether_gold:
+    nom: "Mineur d'or du Nether"
+    description: "Rendez 24 pepites d'or"
+    difficulte: moyen
+    recompense: 120.0
+    materiau: GOLD_NUGGET
+    quantite: 24
+    dimension: nether
+  nether_star:
+    nom: "Tueur de Wither"
+    description: "Rendez 1 etoile du Nether"
+    difficulte: legendaire
+    recompense: 2500.0
+    materiau: NETHER_STAR
+    quantite: 1
+    dimension: nether
+  nether_shroomlight:
+    nom: "Collecteur de shroomlight"
+    description: "Rendez 16 shroomlights"
+    difficulte: moyen
+    recompense: 110.0
+    materiau: SHROOMLIGHT
+    quantite: 16
+    dimension: nether
+
+  # ========== END ==========
+  end_pearl:
+    nom: "Chasseur de perles de l'End"
+    description: "Rendez 16 perles de l'End"
+    difficulte: moyen
+    recompense: 200.0
+    materiau: ENDER_PEARL
+    quantite: 16
+    dimension: end
+  end_stone:
+    nom: "Mineur de pierre de l'End"
+    description: "Rendez 48 pierres de l'End"
+    difficulte: moyen
+    recompense: 150.0
+    materiau: END_STONE
+    quantite: 48
+    dimension: end
+  end_chorus:
+    nom: "Cueilleur de chorus"
+    description: "Rendez 32 fruits de chorus"
+    difficulte: moyen
+    recompense: 140.0
+    materiau: CHORUS_FRUIT
+    quantite: 32
+    dimension: end
+  end_popped:
+    nom: "Cuisineur de chorus"
+    description: "Rendez 24 fruits de chorus eclates"
+    difficulte: moyen
+    recompense: 160.0
+    materiau: POPPED_CHORUS_FRUIT
+    quantite: 24
+    dimension: end
+  end_shulker:
+    nom: "Chasseur de Shulkers"
+    description: "Rendez 6 carapaces de Shulker"
+    difficulte: tres_difficile
+    recompense: 600.0
+    materiau: SHULKER_SHELL
+    quantite: 6
+    dimension: end
+  end_elytra:
+    nom: "Chasseur d'elytres"
+    description: "Rendez 1 elytre"
+    difficulte: tres_difficile
+    recompense: 1200.0
+    materiau: ELYTRA
+    quantite: 1
+    dimension: end
+  end_dragon_egg:
+    nom: "Vainqueur du Dragon"
+    description: "Rendez 1 oeuf de dragon"
+    difficulte: legendaire
+    recompense: 3000.0
+    materiau: DRAGON_EGG
+    quantite: 1
+    dimension: end
+  end_dragon_breath:
+    nom: "Collecteur de souffle de dragon"
+    description: "Rendez 8 souffles de dragon"
+    difficulte: difficile
+    recompense: 350.0
+    materiau: DRAGON_BREATH
+    quantite: 8
+    dimension: end
+  end_purpur:
+    nom: "Architecte de purpur"
+    description: "Rendez 32 blocs de purpur"
+    difficulte: moyen
+    recompense: 180.0
+    materiau: PURPUR_BLOCK
+    quantite: 32
+    dimension: end
+  end_rod:
+    nom: "Collecteur de batons de l'End"
+    description: "Rendez 12 batons de l'End"
+    difficulte: moyen
+    recompense: 170.0
+    materiau: END_ROD
+    quantite: 12
+    dimension: end
+
+  # ========== OVERWORLD DIFFICILES ==========
+  ow_ancient_city:
+    nom: "Explorateur de cite antique"
+    description: "Rendez 6 eclats d'echo"
+    difficulte: difficile
+    recompense: 400.0
+    materiau: ECHO_SHARD
+    quantite: 6
+    dimension: overworld
+  ow_trial:
+    nom: "Conquerant de chambres d'epreuve"
+    description: "Rendez 8 cles d'epreuve"
+    difficulte: difficile
+    recompense: 350.0
+    materiau: TRIAL_KEY
+    quantite: 8
+    dimension: overworld
+  ow_ominous:
+    nom: "Maitre des epreuves ominouses"
+    description: "Rendez 4 cles ominouses"
+    difficulte: tres_difficile
+    recompense: 500.0
+    materiau: OMINOUS_TRIAL_KEY
+    quantite: 4
+    dimension: overworld
+  ow_breeze:
+    nom: "Chasseur de baguettes de Breeze"
+    description: "Rendez 6 baguettes de Breeze"
+    difficulte: difficile
+    recompense: 380.0
+    materiau: BREEZE_ROD
+    quantite: 6
+    dimension: overworld
+  ow_heavy_core:
+    nom: "Chasseur de noyau lourd"
+    description: "Rendez 1 noyau lourd"
+    difficulte: tres_difficile
+    recompense: 700.0
+    materiau: HEAVY_CORE
+    quantite: 1
+    dimension: overworld
+  ow_trident:
+    nom: "Chasseur de tridents"
+    description: "Rendez 1 trident"
+    difficulte: tres_difficile
+    recompense: 850.0
+    materiau: TRIDENT
+    quantite: 1
+    dimension: overworld
+  ow_conduit:
+    nom: "Constructeur de conduit"
+    description: "Rendez 1 conduit"
+    difficulte: tres_difficile
+    recompense: 950.0
+    materiau: CONDUIT
+    quantite: 1
+    dimension: overworld
+  ow_heart:
+    nom: "Chasseur de coeur de la mer"
+    description: "Rendez 1 coeur de la mer"
+    difficulte: tres_difficile
+    recompense: 650.0
+    materiau: HEART_OF_THE_SEA
+    quantite: 1
+    dimension: overworld
+  ow_totem:
+    nom: "Chasseur de totems"
+    description: "Rendez 2 totems d'immortalite"
+    difficulte: tres_difficile
+    recompense: 900.0
+    materiau: TOTEM_OF_UNDYING
+    quantite: 2
+    dimension: overworld
+  ow_sniffer:
+    nom: "Eleveur de Sniffer"
+    description: "Rendez 1 oeuf de Sniffer"
+    difficulte: difficile
+    recompense: 450.0
+    materiau: SNIFFER_EGG
+    quantite: 1
+    dimension: overworld
+
+# ============================================
+#   Quete globale (rotation toutes les 12h)
+#   Plus de joueurs la valident → plus elle devient dure et payante
+# ============================================
+quete-globale:
+  # Etat persistant (ne pas modifier manuellement en general)
+  etat:
+    id: ""
+    debut-cycle: 0
+    completions: 0
+    completes: []
+  pool:
+    fer_massif:
+      nom: "Livraison de fer massive"
+      description: "Rendez des lingots de fer (quantite croissante)"
+      difficulte: moyen
+      recompense: 200.0
+      materiau: IRON_INGOT
+      quantite: 32
+      dimension: any
+    diamants:
+      nom: "Cargaison de diamants"
+      description: "Rendez des diamants (quantite croissante)"
+      difficulte: difficile
+      recompense: 400.0
+      materiau: DIAMOND
+      quantite: 6
+      dimension: any
+    or_pur:
+      nom: "Reserve d'or"
+      description: "Rendez des lingots d'or (quantite croissante)"
+      difficulte: moyen
+      recompense: 280.0
+      materiau: GOLD_INGOT
+      quantite: 20
+      dimension: any
+    blaze:
+      nom: "Poudre de Blaze urgente"
+      description: "Rendez des poudres de Blaze (Nether)"
+      difficulte: difficile
+      recompense: 350.0
+      materiau: BLAZE_POWDER
+      quantite: 16
+      dimension: nether
+    ender_pearl:
+      nom: "Perles de l'End prioritaires"
+      description: "Rendez des perles de l'End"
+      difficulte: moyen
+      recompense: 300.0
+      materiau: ENDER_PEARL
+      quantite: 12
+      dimension: end
+    netherite:
+      nom: "Urgence netherite"
+      description: "Rendez des lingots de netherite"
+      difficulte: tres_difficile
+      recompense: 700.0
+      materiau: NETHERITE_INGOT
+      quantite: 1
+      dimension: nether
+    obsidienne:
+      nom: "Murs d'obsidienne"
+      description: "Rendez de l'obsidienne"
+      difficulte: difficile
+      recompense: 320.0
+      materiau: OBSIDIAN
+      quantite: 24
+      dimension: overworld
+    emeraudes:
+      nom: "Coffre d'emeraudes"
+      description: "Rendez des emeraudes"
+      difficulte: difficile
+      recompense: 380.0
+      materiau: EMERALD
+      quantite: 16
+      dimension: any
+    redstone:
+      nom: "Circuit de redstone"
+      description: "Rendez de la redstone"
+      difficulte: moyen
+      recompense: 180.0
+      materiau: REDSTONE
+      quantite: 64
+      dimension: overworld
+    quartz_nether:
+      nom: "Quartz du Nether en masse"
+      description: "Rendez du quartz"
+      difficulte: moyen
+      recompense: 220.0
+      materiau: QUARTZ
+      quantite: 48
+      dimension: nether
+    shulker:
+      nom: "Carapaces de Shulker"
+      description: "Rendez des carapaces de Shulker"
+      difficulte: tres_difficile
+      recompense: 550.0
+      materiau: SHULKER_SHELL
+      quantite: 3
+      dimension: end
+    phantom:
+      nom: "Membranes de Phantom"
+      description: "Rendez des membranes de Phantom"
+      difficulte: difficile
+      recompense: 280.0
+      materiau: PHANTOM_MEMBRANE
+      quantite: 12
+      dimension: overworld
+    ancient_debris:
+      nom: "Debris antiques prioritaires"
+      description: "Rendez des debris antiques"
+      difficulte: tres_difficile
+      recompense: 650.0
+      materiau: ANCIENT_DEBRIS
+      quantite: 3
+      dimension: nether
+    amethyste:
+      nom: "Eclats d'amethyste"
+      description: "Rendez des eclats d'amethyste"
+      difficulte: moyen
+      recompense: 200.0
+      materiau: AMETHYST_SHARD
+      quantite: 32
+      dimension: overworld
+    echo:
+      nom: "Eclats d'echo de la cite"
+      description: "Rendez des eclats d'echo"
+      difficulte: difficile
+      recompense: 420.0
+      materiau: ECHO_SHARD
+      quantite: 4
+      dimension: overworld
+
+broadcast-gros-paiements: true
+seuil-broadcast: 1000.0

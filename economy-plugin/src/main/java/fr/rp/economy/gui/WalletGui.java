@@ -104,7 +104,7 @@ public class WalletGui {
                     List.of(ChatColor.GRAY + "Page " + page + "/" + totalPages)));
         }
         inv.setItem(49, creerItem(Material.PAPER, ChatColor.AQUA + "Page " + (page + 1) + "/" + totalPages,
-                List.of(ChatColor.GRAY + liste.size() + " quêtes")));
+               List.of(ChatColor.GRAY + String.valueOf(liste.size()) + " quêtes")
         if (page < totalPages - 1) {
             inv.setItem(53, creerItem(Material.ARROW, ChatColor.YELLOW + "Page suivante →",
                     List.of(ChatColor.GRAY + "Page " + (page + 2) + "/" + totalPages)));
